@@ -1,0 +1,59 @@
+# ── site-specific scripts (credentials / local paths) ─────────────────────────
+sync_from_rivanna.sh
+
+# ── model weights ─────────────────────────────────────────────────────────────
+*.pth
+
+# ── data arrays (numpy / ROOT) ────────────────────────────────────────────────
+*.npy
+*.npz
+*.root
+*.h5
+
+# ── training run output directories ──────────────────────────────────────────
+outputs_*/
+classifier/outputs_*/
+
+# ── synced checkpoints ────────────────────────────────────────────────────────
+classifier/checkpoints/boot_*/
+
+# ── pipeline intermediate files ───────────────────────────────────────────────
+post_processing/output/
+
+# ── training artifacts (logs, metrics, plots) ─────────────────────────────────
+*.json
+*.err
+*.out
+*.log
+*.csv
+*.png
+*.pdf
+*.eps
+
+# ── figures directory (ignore outputs, keep the layout manifest) ─────────────
+figures/*
+!figures/README.md
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# ── model export formats ──────────────────────────────────────────────────────
+*.onnx
+*.ort
+
+# ── virtual environments ──────────────────────────────────────────────────────
+.venv*/
+venv*/
+.env*/
+models/
+
+# ── IDE / OS ──────────────────────────────────────────────────────────────────
+.DS_Store
+.vscode/
+.idea/
+*.swp
+# site-specific data-sync script (server paths / logins)
+sync_repro_data.sh
